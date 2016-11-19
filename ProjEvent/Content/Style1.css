@@ -1,0 +1,169 @@
+﻿/*Css*/
+
+/*img {
+
+	background-image: url("../img/flower1.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	/*filter: opacity(50%);
+	width: 100%;
+	height: 100%;
+	
+	
+	
+}*/
+
+body {
+   	background-image: url("./imgHome/dancing1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: auto;
+  	height: auto;
+
+	
+}
+.bigbox {
+	
+	margin-left: 25%;
+	margin-top: 9%;
+	text-align: center;
+    border: 2px solid white;
+	width: 50vw;
+	height: 70vh;
+	
+	
+}
+
+.btn1{
+	padding: 10px 100px;
+	background-color: lightblue;
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+	font-size: 100%;
+	font-style: bold;
+}
+
+.btn1:hover{
+	background-color: violet;
+}
+
+.btn1:active{
+	background-color: pink;
+}
+
+
+.btn2{
+	padding: 10px 120px;
+	background-color: lightblue;
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+	font-size: 100%;
+	font-style: bold;
+}
+
+.btn2:hover{
+	background-color: violet;
+}
+
+.btn2:active{
+	background-color: pink;
+}
+
+
+
+
+.center {
+	/*padding-top: 10px;*/
+	color: white;
+	font-size: 450%;
+	font-family: 'Aladin';
+	text-shadow: black 0.0em 0.1em 0.1em ;
+
+}
+
+
+
+@font-face{
+	font-family: 'Charmonman';
+	src:url('../th_charmonman-webfont.eot');
+	src:url('../th_charmonman-webfont.woff') format('woff');
+
+}
+
+@font-face{
+	font-family: 'Aladin';
+	src:url('../Aladin-Regular.ttf') format('truetype');
+
+}
+
+@font-face{
+	font-family: 'Aclonica';
+	src:url('../Aclonica.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'),  Super Modern Browsers 
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+.box0{ 
+	margin-left: -1%;
+	margin-top: 5%;
+	text-align: center;
+    /*border: 5px solid red;*/
+	width: 50vw;
+	height: 20vh;
+
+
+}
+
+.box1{ 
+	margin-left: -40%;
+	margin-top: -2%;
+	text-align: center;
+    /*border: 2px solid white;*/
+	width: 90vw;
+	height: 10vh;
+
+
+}
+
+.quote{
+	color: white;
+	font-size: 100%;
+	
+
+}
+
+.boxq{
+	margin-left: 25%;
+	margin-top: 15%;
+	text-align: center;
+    /*border: 2px solid yellow;*/
+	width: 25vw;
+	height: 10vh;
+	text-shadow: black 0.0em 0.1em 0.1em ;
+}	
+
+
+
+
+/*.box1{
+	position:fixed;
+	top:50%;
+	left:50%;
+	text-align:center;
+	margin-left: -50px;
+}*/
+
+
+
