@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ProjEvent.Models;
 
 namespace ProjEvent.Controllers
 {
@@ -12,19 +13,56 @@ namespace ProjEvent.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+         public ActionResult Login()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Login(login lg)
         {
-            ViewBag.Message = "Your contact page.";
-
+            if(ModelState.IsValid)
+            {
+                using (Entities ue = new Entities())
+                {
+                    var log = ue.MEMBERs.Where(a => a.USERNAME.Equals(lg.username) && a.PASSWORD.Equals(lg.password)).FirstOrDefault();
+                    if(log!=null)
+                    {
+                        Session["username"] = log.USERNAME;
+                        return RedirectToAction("UsersHome","Home");
+                    }
+                    else
+                    {
+                        Response.Write("<script> alert('Invalid password')</script>");
+                    }
+                }
+            }
             return View();
         }
+
+        public ActionResult UsersHome()
+        {
+            return View();
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Login", "Home");
+        }
+
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
+
+        //    return View();
+        //}
+
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
+
+        //    return View();
+        //}
     }
 }
