@@ -51,11 +51,11 @@ namespace ProjEvent.Controllers
         {
             if (ModelState.IsValid)
             {
+                mEMBER.MEMBER_ID = (short)(db.MEMBERs.Count()+1);
                 db.MEMBERs.Add(mEMBER);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-
             return View(mEMBER);
         }
 
@@ -124,5 +124,7 @@ namespace ProjEvent.Controllers
             }
             base.Dispose(disposing);
         }
+
+        
     }
 }
