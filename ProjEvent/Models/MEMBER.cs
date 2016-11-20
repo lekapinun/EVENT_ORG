@@ -6,7 +6,7 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
 namespace ProjEvent.Models
 {
     using System;
@@ -29,6 +29,7 @@ namespace ProjEvent.Models
     
         public short MEMBER_ID { get; set; }
         public long NATIONAL_ID { get; set; }
+        [Required(ErrorMessage = "pls enter username")]
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
         public string FNAME { get; set; }
