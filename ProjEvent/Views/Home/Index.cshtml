@@ -1,35 +1,28 @@
-﻿
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/site1.css")
+﻿@Styles.Render("~/Content/site1.css")
 
-</head>
-<body class="background">
-    <div class="bigbox container-fluid">
-        <div class="row">
-            <!-- row2 -->
-            <div class="col-md-6 col-lg-6 col-md-1-offset-3 col-lg-offset-3" style="margin-top:200px;margin-bottom:300px">
-                <div>
-                    <!-- middle -->
-                    <div>
-                        <!-- top -->
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12"><h1 class="headI">Event Organice</h1></div>
-                        </div>
-                    </div><!-- top -->
-                    <div class="boxr2centerr1">
-                        <!-- down -->
-                        <div class="boxr2centerr2">
-                            <div class="row">
-                                <!-- down 1-->
-                                <div class="col-md-12 col-lg-12">
-                                    <p class="pI">
-                                        Life is not about waiting for the storm to pass.</br>
-                                        It is about learning to dance in the rain.
+    @if (Session["username"] == null)
+    {
+        <body class="background">
+            <div class="bigbox container-fluid">
+                <div class="row">
+                    <!-- row2 -->
+                    <div class="col-md-6 col-lg-6 col-md-1-offset-3 col-lg-offset-3" style="margin-top:200px;margin-bottom:300px">
+                        <div>
+                            <!-- middle -->
+                            <div>
+                                <!-- top -->
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12"><h1 class="headI">Event Organice</h1></div>
+                                </div>
+                            </div><!-- top -->
+                            <div class="boxr2centerr1">
+                                <!-- down -->
+                                <div class="boxr2centerr2">
+                                    <div class="row">
+                                        <!-- down 1-->
+                                        <div class="col-md-12 col-lg-12">
+                                            <p class="pI">
+                                                Life is not about waiting for the storm to pass.<br>It is about learning to dance in the rain.
                                     </p>
                                 </div>
                             </div><!-- down1 -->
@@ -47,13 +40,21 @@
                                 @Html.ActionLink("Login", "Login", "Home", new { @class = "btn btn-sm col-xs-12 col-sm-6 col-md-2 col-lg-4 col-sm-offset-3 col-md-offset-5 col-lg-offset-4 button-site" })
                             </div><!-- down 3-->
                         </div> <!-- down -->
-                    </div> <!--  middle -->
-                </div>
-            </div><!-- row2 -->
+                        </div> <!--  middle -->
+                    </div>
+                </div><!-- row2 -->
+            </div>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+    }
+    else
+    {
+        @Html.Action("UsersHome","Home")
+    }
+
+
+
+
 
 
 

@@ -9,7 +9,7 @@ namespace ProjEvent.Models
     public class login
     {
         [Required(ErrorMessage ="pls enter user name")]
-        public string username { get; set; }
+        public string email { get; set; }
         [Required(ErrorMessage = "pls enter password")]
         public string password { get; set; }
     }

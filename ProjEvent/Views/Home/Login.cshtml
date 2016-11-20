@@ -2,33 +2,56 @@
 @{
     ViewBag.Title = "Login";
 }
+@Styles.Render("~/Content/site1.css")
 
-
-@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+@if (Session["username"] == null)
 {
-   
+    <body style="background-image:url('../Content/imgHome/dance2.jpg');background-repeat: no-repeat;background-size: cover;">
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+            <div class="container-fluid">
+                <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4 col-xs-offset-1  col-sm-offset-3 col-md-offset-4 col-lg-offset-4 text-center form-login">
+                    <div class="row text-center">
+                        <h3>Log in</h3>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-left">
+                                    <label for="exampleInputEmail1">Email</label>
+                                </div>
+                                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                    @Html.TextBoxFor(a => a.email, new { @class = "form-control", @type = "email", @placeholder = "Email" })
+                                    @Html.ValidationMessageFor(a => a.email)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-left">
+                                    <label for="exampleInputPassword1">Password</label>
+                                </div>
+                                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                    @Html.PasswordFor(a => a.password, new { @class = "form-control", @type = "password", @placeholder = "Password" })
+                                    @Html.ValidationMessageFor(a => a.password)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-btn">
+                            <input type="submit" id="submitbtn" class="btn btn-sm button-site col-md-2 col-lg-2 col-md-offset-4 col-lg-offset-4" value="Log in">
+                            @Html.ActionLink("Login", "Login", "Home", new { @class = "btn btn-sm button-site col-md-2 col-lg-2 button-signup" })
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+    </body>
 }
-        @*<!DOCTYPE html>
-            <html>
-
-                <body class="b">
-                    <div class="center">
-                        <!-- big box-->
-                        <div id="box1">Log in</div> <!-- login -->
-                        <div id="box2">
-                            <!-- email&pass -->
-                            <div id="email">e-mail</div>
-                            <div id="emailtobox"><input type="text"></div> <!-- emailtobox --> <br />
-                            <div id="pass">
-                                Password <input type="text">
-                            </div><br /> <!-- email&pass -->
-                        </div>
-                        <div id="box3">
-                            <a href="#" class="btn">Submit</a>
-                        </div>
-                    </div><!-- big box -->
-                </body>
-            </html>*@
+else
+{
+    @Html.Action("UsersHome", "Home")
+}
+  
 
         @*<div class="container-fluid">
                 <fieldset style="width:300px;">

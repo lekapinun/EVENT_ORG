@@ -60,6 +60,9 @@
     margin-top:5px;
     margin-bottom:5px;
 }
+.button-signup {
+    margin-left:10px;
+}
 
 .btn:hover{
 	background-color: pink;
@@ -85,7 +88,21 @@
 	font-size: 90%;
 }
 
-
+.form-group label{
+			font-size: 18px;
+			padding-top: 5px;
+		}
+		.form-group{
+			margin-top: 10px;
+		}
+		.form-btn{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.form-login{
+			background: rgba(255, 255, 255, 0.6);
+			border-radius: 5px;
+		}
 
 
 
@@ -119,6 +136,9 @@
     .pI {
         font-size:18px;
     }
+    .form-login {
+        margin-top:200px;
+    }
 }
 @media (min-width: 1400px) {
     .headI {
@@ -132,5 +152,8 @@
     }
     .pI {
         font-size:20px;
+    }
+    .form-login {
+        margin-top:250px;
     }
 }
