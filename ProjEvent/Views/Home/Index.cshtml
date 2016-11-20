@@ -1,53 +1,59 @@
-﻿@*@{
-    Layout = null;
-}
-@Styles.Render("~/Content/css")*@
-
+﻿
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8" /> <!-- set language -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- browser IE use lastest version -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- respone on every device -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/site1.css")
 
-    <title>My First Boostrap Application</title>
-
-    <!--[if lt IE 9] >
-    <script scr="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script scr="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif] -->
 </head>
+<body class="background">
+    <div class="bigbox container-fluid">
+        <div class="row">
+            <!-- row2 -->
+            <div class="col-md-6 col-lg-6 col-md-1-offset-3 col-lg-offset-3" style="margin-top:200px;margin-bottom:300px">
+                <div>
+                    <!-- middle -->
+                    <div>
+                        <!-- top -->
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12"><h1 class="headI">Event Organice</h1></div>
+                        </div>
+                    </div><!-- top -->
+                    <div class="boxr2centerr1">
+                        <!-- down -->
+                        <div class="boxr2centerr2">
+                            <div class="row">
+                                <!-- down 1-->
+                                <div class="col-md-12 col-lg-12">
+                                    <p class="pI">
+                                        Life is not about waiting for the storm to pass.</br>
+                                        It is about learning to dance in the rain.
+                                    </p>
+                                </div>
+                            </div><!-- down1 -->
+                        </div>
+                        <div class="boxr2centerr2">
+                            <div class="row">
+                                <!-- down2 -->
+                                <a class="btn btn-sm col-xs-12 col-sm-6 col-md-2 col-lg-4 col-sm-offset-3 col-md-offset-5 col-lg-offset-4 button-site " href="#">Get Started</a>
+                            </div><!-- down2 -->
+                        </div>
 
-<body>
-
-    <div class="bigbox">
-        <!--bigest -->
-        <p class="center" ; class="font"><B>Event  Organize</B></p>
-
-        <div class="boxq">
-            <p class="quote">
-                Life is not about waiting for the storm to pass.
-                It is about learning to dance in the rain.
-            </p>
-
+                        <div class="boxr2centerr2">
+                            <div class="row">
+                                <!-- down3 -->
+                                @Html.ActionLink("Login", "Login", "Home", new { @class = "btn btn-sm col-xs-12 col-sm-6 col-md-2 col-lg-4 col-sm-offset-3 col-md-offset-5 col-lg-offset-4 button-site" })
+                            </div><!-- down 3-->
+                        </div> <!-- down -->
+                    </div> <!--  middle -->
+                </div>
+            </div><!-- row2 -->
         </div>
-
-        <div class="box0">
-
-            <div class="box1">
-                <a href="#" class="btn1"><b> Get started </b></a>
-            </div>
-            <div class="box1">
-                <a href="#" class="btn2"><b> Log in  </b></a>
-            </div>
-
-        </div>
-    </div><!-- bigest -->
-
+    </div>
 </body>
 </html>
-
 
 
 
