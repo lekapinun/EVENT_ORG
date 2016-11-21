@@ -18,11 +18,11 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-left">
-                                    <label for="exampleInputEmail1">Email</label>
+                                    <label for="exampleInputUsername1">Username</label>
                                 </div>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    @Html.TextBoxFor(a => a.email, new { @class = "form-control", @type = "email", @placeholder = "Email" })
-                                    @Html.ValidationMessageFor(a => a.email)
+                                    @Html.TextBoxFor(a => a.username, new { @class = "form-control", @type = "text", @placeholder = "Username" })
+                                    @Html.ValidationMessageFor(a => a.username)
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="row form-btn">
                             <input type="submit" id="submitbtn" class="btn btn-sm button-site col-md-2 col-lg-2 col-md-offset-4 col-lg-offset-4" value="Log in">
-                            @Html.ActionLink("Login", "Login", "Home", new { @class = "btn btn-sm button-site col-md-2 col-lg-2 button-signup" })
+                            @Html.ActionLink("Sign Up", "Create", "MEMBERs", "", new { @class = "btn btn-sm button-site col-md-2 col-lg-2 button-signup" })
                         </div>
                     </form>
                 </div>

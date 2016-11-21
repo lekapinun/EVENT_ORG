@@ -40,6 +40,8 @@ namespace ProjEvent.Models
         public string E_MAIL { get; set; }
         public string PHONE { get; set; }
         public string CREDIT_CARD { get; set; }
+
+        public string B_DATE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FOLLOWING> FOLLOWINGs { get; set; }

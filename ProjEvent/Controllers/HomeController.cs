@@ -25,7 +25,7 @@ namespace ProjEvent.Controllers
             {
                 using (Entities ue = new Entities())
                 {
-                    var log = ue.MEMBERs.Where(a => a.E_MAIL.Equals(lg.email) && a.PASSWORD.Equals(lg.password)).FirstOrDefault();
+                    var log = ue.MEMBERs.Where(a => a.USERNAME.Equals(lg.username) && a.PASSWORD.Equals(lg.password)).FirstOrDefault();
                     if(log!=null)
                     {
                         Session["username"] = log.USERNAME;
