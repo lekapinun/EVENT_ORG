@@ -41,6 +41,7 @@ namespace ProjEvent.Controllers
         public ActionResult Create()
         {
             ViewBag.PROMOTE_E_ID = new SelectList(db.PROMOTE_E, "PROMOTE_ID", "TARGET_GENDER");
+            ViewBag.LOCATION_NAME = new SelectList(db.LOCATIONs, "LOCATION_NAME", "LOCATION_NAME");
             return View();
         }
 
@@ -133,6 +134,16 @@ namespace ProjEvent.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public List<SelectListItem> Show_Location()
+        {
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var item in db.LOCATIONs)
+            {
+                list.Add(new SelectListItem { Text = item.LOCATION_NAME, Value = item.LOCATION_NAME });
+            }
+            return list;
         }
     }
 }
