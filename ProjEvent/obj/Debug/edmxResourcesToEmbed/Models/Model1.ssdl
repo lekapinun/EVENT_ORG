@@ -78,6 +78,7 @@
     <Property Name="E-MAIL" Type="varchar2" MaxLength="50" />
     <Property Name="PHONE" Type="varchar2" MaxLength="10" />
     <Property Name="CREDIT_CARD" Type="varchar2" MaxLength="20" />
+    <Property Name="URL_IMG" Type="varchar2" MaxLength="4000" />
   </EntityType>
   <EntityType Name="OWNER_EVENT">
     <Key>

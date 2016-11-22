@@ -19,7 +19,7 @@ namespace ProjEvent.Models
         {
             this.TICKETs = new HashSet<TICKET>();
             this.LOCATIONs = new HashSet<LOCATION>();
-            this.MEMBERs = new HashSet<MEMBER>(); 
+            this.MEMBERs = new HashSet<MEMBER>();
             this.MEMBERs1 = new HashSet<MEMBER>();
         }
     

@@ -80,6 +80,7 @@
     <NavigationProperty Name="EVENTs" Relationship="Self.JOIN_EVENT" FromRole="MEMBER" ToRole="EVENT" />
     <NavigationProperty Name="EVENTs1" Relationship="Self.OWNER_EVENT" FromRole="MEMBER" ToRole="EVENT" />
     <NavigationProperty Name="LOCATIONs" Relationship="Self.OWNER_LOCATION" FromRole="MEMBER" ToRole="LOCATION" />
+    <Property Name="URL_IMG" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="PROMOTE_E">
     <Key>

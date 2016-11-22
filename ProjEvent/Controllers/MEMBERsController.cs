@@ -47,7 +47,7 @@ namespace ProjEvent.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "MEMBER_ID,NATIONAL_ID,USERNAME,PASSWORD,FNAME,LNAME,SEX,B_DATE,ADDRESS,E_MAIL,PHONE,CREDIT_CARD")] MEMBER mEMBER)
+        public async Task<ActionResult> Create([Bind(Include = "MEMBER_ID,NATIONAL_ID,USERNAME,PASSWORD,FNAME,LNAME,SEX,B_DATE,ADDRESS,E_MAIL,PHONE,CREDIT_CARD,URL_IMG")] MEMBER mEMBER)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace ProjEvent.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "MEMBER_ID,NATIONAL_ID,USERNAME,PASSWORD,FNAME,LNAME,SEX,BIRTH_DATE,ADDRESS,E_MAIL,PHONE,CREDIT_CARD")] MEMBER mEMBER)
+        public async Task<ActionResult> Edit([Bind(Include = "MEMBER_ID,NATIONAL_ID,USERNAME,PASSWORD,FNAME,LNAME,SEX,BIRTH_DATE,ADDRESS,E_MAIL,PHONE,CREDIT_CARD,URL_IMG")] MEMBER mEMBER)
         {
             if (ModelState.IsValid)
             {

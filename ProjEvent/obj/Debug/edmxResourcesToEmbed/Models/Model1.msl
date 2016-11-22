@@ -52,6 +52,7 @@
     <EntitySetMapping Name="MEMBERs">
       <EntityTypeMapping TypeName="Model.MEMBER">
         <MappingFragment StoreEntitySet="MEMBER">
+          <ScalarProperty Name="URL_IMG" ColumnName="URL_IMG" />
           <ScalarProperty Name="MEMBER_ID" ColumnName="MEMBER_ID" />
           <ScalarProperty Name="NATIONAL_ID" ColumnName="NATIONAL_ID" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />

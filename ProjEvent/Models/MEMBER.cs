@@ -6,12 +6,13 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System.ComponentModel.DataAnnotations;
+
 namespace ProjEvent.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class MEMBER
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -28,8 +29,9 @@ namespace ProjEvent.Models
         }
     
         public short MEMBER_ID { get; set; }
+        [Required(ErrorMessage = "please enter National ID")]
         public long NATIONAL_ID { get; set; }
-        [Required(ErrorMessage = "pls enter username")]
+        [Required(ErrorMessage = "please enter Username")]
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
         public string FNAME { get; set; }
@@ -40,6 +42,7 @@ namespace ProjEvent.Models
         public string E_MAIL { get; set; }
         public string PHONE { get; set; }
         public string CREDIT_CARD { get; set; }
+        public string URL_IMG { get; set; }
 
         public string B_DATE { get; set; }
     
@@ -60,6 +63,4 @@ namespace ProjEvent.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOCATION> LOCATIONs { get; set; }
     }
-
-
 }
