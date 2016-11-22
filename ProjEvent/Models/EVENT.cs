@@ -38,6 +38,8 @@ namespace ProjEvent.Models
         public Nullable<short> MAX_SEAT { get; set; }
         public Nullable<short> PRICE { get; set; }
         public Nullable<short> PROMOTE_E_ID { get; set; }
+
+        public string Owner_member { get; set; }
     
         public virtual PROMOTE_E PROMOTE_E { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

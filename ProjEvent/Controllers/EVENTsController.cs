@@ -53,6 +53,11 @@ namespace ProjEvent.Controllers
         {
             if (ModelState.IsValid)
             {
+                eVENT.EVENT_ID = (short)(db.EVENTs.Count() + 1);
+                eVENT.Owner_member = Session["username"].ToString();
+                var owner_mem = db.MEMBERs.Where(a => a.USERNAME.Equals(eVENT.Owner_member)).FirstOrDefault();
+                eVENT.MEMBERs1.Add(owner_mem);
+
                 db.EVENTs.Add(eVENT);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

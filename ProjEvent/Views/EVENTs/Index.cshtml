@@ -2,7 +2,6 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = null;
 }
 
 <h2>Index</h2>
@@ -12,6 +11,9 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MEMBERs1)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.EVENT_ID)
         </th>
@@ -62,6 +64,12 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @foreach (var own_event in item.MEMBERs1)
+            {
+                @Html.DisplayFor(modelItem => own_event.MEMBER_ID)
+            }
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.EVENT_ID)
         </td>
