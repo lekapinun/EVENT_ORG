@@ -49,10 +49,25 @@ namespace ProjEvent.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID_LOCATION,LOCATION_NAME,CATEGORY,DETAIL,PICTURE,TIME_START_L,TIME_END_L,ADDRESS,FACILITY,PRICE,AREA,PROMOTE_L_ID")] LOCATION lOCATION)
+        public async Task<ActionResult> Create([Bind(Include = "ID_LOCATION,LOCATION_NAME,CATEGORY,DETAIL,PICTURE,S_DATE,E_DATE,ADDRESS,FACILITY,PRICE,AREA,PROMOTE_L_ID")] LOCATION lOCATION)
         {
             if (ModelState.IsValid)
             {
+                lOCATION.ID_LOCATION = (short)(db.LOCATIONs.Count() + 1);
+
+                lOCATION.Owner_location = Session["username"].ToString();
+                var owner_lo = db.MEMBERs.Where(a => a.USERNAME.Equals(lOCATION.Owner_location)).FirstOrDefault();
+                lOCATION.MEMBERs.Add(owner_lo);
+
+                string[] date = lOCATION.S_DATE.Split('-');
+                lOCATION.S_DATE = date[1] + '/' + date[0] + '/' + date[2];
+                lOCATION.TIME_START_L = Convert.ToDateTime(lOCATION.S_DATE);
+
+                string[] date1 = lOCATION.E_DATE.Split('-');
+                lOCATION.E_DATE = date1[1] + '/' + date1[0] + '/' + date1[2];
+                lOCATION.TIME_END_L = Convert.ToDateTime(lOCATION.E_DATE);
+
+
                 db.LOCATIONs.Add(lOCATION);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

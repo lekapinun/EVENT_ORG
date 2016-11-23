@@ -41,7 +41,8 @@ namespace ProjEvent.Models
 
         public string Owner_member { get; set; }
         public string Event_location { get; set; }
-    
+
+
         public virtual PROMOTE_E PROMOTE_E { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TICKET> TICKETs { get; set; }

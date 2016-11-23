@@ -1,4 +1,9 @@
-﻿@Styles.Render("~/Content/site1.css")
+﻿@{ 
+    Layout = null;
+}
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Styles.Render("~/Content/site1.css")
 
     @if (Session["username"] == null)
     {
@@ -74,9 +79,12 @@
                 </div>
             </div>
     </body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
     }
     else
     {
+        Layout = null;
         @Html.Action("UsersHome","Home")
     }
 

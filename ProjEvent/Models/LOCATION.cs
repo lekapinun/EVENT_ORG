@@ -34,6 +34,10 @@ namespace ProjEvent.Models
         public Nullable<int> AREA { get; set; }
         public Nullable<short> PROMOTE_L_ID { get; set; }
     
+        public string Owner_location { get; set; }
+        public string S_DATE { get; set; }
+        public string E_DATE { get; set; }
+
         public virtual PROMOTE_L PROMOTE_L { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EVENT> EVENTs { get; set; }

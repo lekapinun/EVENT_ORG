@@ -1,7 +1,10 @@
 ﻿@model ProjEvent.Models.login
 @{
     ViewBag.Title = "Login";
+    Layout = null;
 }
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
 @Styles.Render("~/Content/site1.css")
 
 @if (Session["username"] == null)
@@ -46,9 +49,12 @@
             </div>
         }
     </body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 }
 else
 {
+    Layout = null;
     @Html.Action("UsersHome", "Home")
 }
   

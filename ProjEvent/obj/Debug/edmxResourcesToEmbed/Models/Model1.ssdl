@@ -54,8 +54,8 @@
     <Property Name="CATEGORY" Type="varchar2" MaxLength="15" />
     <Property Name="DETAIL" Type="varchar2" MaxLength="4000" />
     <Property Name="PICTURE" Type="varchar2" MaxLength="4000" />
-    <Property Name="TIME_START_L" Type="timestamp" Precision="6" />
-    <Property Name="TIME_END_L" Type="timestamp" Precision="6" />
+    <Property Name="TIME_START_L" Type="date" />
+    <Property Name="TIME_END_L" Type="date" />
     <Property Name="ADDRESS" Type="varchar2" MaxLength="4000" />
     <Property Name="FACILITY" Type="varchar2" MaxLength="4000" />
     <Property Name="PRICE" Type="number" Precision="7" Scale="0" />
