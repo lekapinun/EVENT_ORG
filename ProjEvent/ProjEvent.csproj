@@ -241,6 +241,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\EVENTs\EVENT.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\EVENTs\Create.cshtml" />
     <Content Include="Views\EVENTs\Delete.cshtml" />

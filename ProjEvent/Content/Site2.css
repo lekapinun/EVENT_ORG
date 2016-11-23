@@ -11,6 +11,7 @@
 }
 
 .navbar-form-mind .form-control-mind {
+    margin-top: 0px;
     width: 100% !important;
   }
 
@@ -121,6 +122,14 @@
     border-radius: 5px;
 }
 
+.button-site1{
+
+  background-color: #EDA23E;
+/*    padding: 5px 100px;*/
+  color: #A82221;
+
+}
+
 .btn-default-mind {
   color: #A82221 !important;
   background-color: #EDA23E !important;
@@ -160,12 +169,22 @@
   border-color: #EDA23E  !important;
 }
 
+
 .btn:hover{
-	background-color: pink;
+  background-color: pink;
 }
 
 .btn:active{
-	background-color: violet;
+  background-color: violet;
+}
+
+ 
+.btn1:hover{
+	background-color: pink;
+}
+
+.btn1:active{
+	background-color: #F2CB67;
 }
 
 
@@ -187,7 +206,7 @@
 
 .form-group-mind {
     margin-top: 0px;
-    width: 400px;
+  width: 400px;
 }
 
 .headI{
@@ -199,9 +218,9 @@
 .mini {
   margin-top: -10px;
 	 width: 30px;
-	
+}
 
-} 
+#MindCarousel{} 
 
 .logo a img{
 	width: 30px;
@@ -213,7 +232,13 @@
 	font-size: 10px
 }
 
+.up{
+  margin-top: -40px;
+}
 
+.down{
+    margin-top: 20px;
+}
 
 
 
@@ -228,7 +253,7 @@
 	src:url('fonttest/Aclonica.ttf') format('truetype');
 }
 
-@media  screen and (max-width: 300px) {
+@media  screen and (max-width: 767px) {
 	.pI{
 		font-size: 10px;
 	}
@@ -240,9 +265,15 @@
 
     }
     .navbar-form {
-      width: auto;
+      width: 100% !important;
     }
     
+   
+
+     .button-site1 {
+        width: 100%;
+      
+    }
 
 }
 
@@ -265,6 +296,13 @@
     width: 100% !important;
   }
 
+    .button-site1 {
+        width: 100%;
+      
+    }
+
+
+ 
 
 
 
@@ -286,6 +324,13 @@
     .navbar-form-mind .form-control-mind {
     width: 100% !important;
   }
+    .button-site1 {
+        width: 100%;
+      
+    }
+
+
+
 
     
 }
@@ -306,6 +351,11 @@
     .navbar-form-mind .form-control-mind {
     width: 100% !important;
   }
+
+  .button-site1 {
+        width: 100%;
+      
+    }
 
 
 }

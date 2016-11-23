@@ -154,5 +154,10 @@ namespace ProjEvent.Controllers
             }
             return list;
         }
+
+        public ActionResult EVENT()
+        {
+            return View();
+        }
     }
 }
