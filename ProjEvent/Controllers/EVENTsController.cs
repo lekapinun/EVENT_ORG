@@ -50,7 +50,7 @@ namespace ProjEvent.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "EVENT_ID,EVENT_NAME,CATEGORY,DETAIL,PICTURE,VIDEO,TIME_START_E,TIME_END_E,CONDITION_MIN_AGE,CONDITION_MAX_AGE,CONDITION_SEX,SOLD_OUT_SEAT,MAX_SEAT,PRICE,PROMOTE_E_ID,Event_location")] EVENT eVENT)
+        public async Task<ActionResult> Create([Bind(Include = "EVENT_ID,EVENT_NAME,CATEGORY,DETAIL,PICTURE,VIDEO,TIME_START_E,TIME_END_E,CONDITION_MIN_AGE,CONDITION_MAX_AGE,CONDITION_SEX,SOLD_OUT_SEAT,MAX_SEAT,PRICE,PROMOTE_E_ID,Event_location,S_DATE,E_DATE,S_TIME,E_TIME")] EVENT eVENT)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +62,11 @@ namespace ProjEvent.Controllers
 
                 var location = db.LOCATIONs.Where(a => a.LOCATION_NAME.Equals(eVENT.Event_location)).FirstOrDefault();
                 eVENT.LOCATIONs.Add(location);
+
+                eVENT.TIME_START_E = eVENT.S_DATE.Add(eVENT.S_TIME);
+                eVENT.TIME_END_E = eVENT.S_DATE.Add(eVENT.E_TIME);
+
+                eVENT.SOLD_OUT_SEAT = 0;
 
                 db.EVENTs.Add(eVENT);
                 await db.SaveChangesAsync();

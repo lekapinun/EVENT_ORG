@@ -60,7 +60,16 @@
             @Html.DisplayNameFor(model => model.PROMOTE_E.PROMOTE_ID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LOCATIONs)
+            @Html.DisplayNameFor(model => model.S_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_TIME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_TIME)
         </th>
         <th></th>
     </tr>
@@ -123,6 +132,18 @@
             {
                 @Html.DisplayFor(modelItem => active.ID_LOCATION)
             }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_TIME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_TIME)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EVENT_ID }) |

@@ -71,18 +71,35 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.TIME_START_E, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.S_DATE, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.TIME_START_E, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.TIME_START_E, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.S_DATE, new { htmlAttributes = new { @class = "form-control" , @type = "date" } })
+                    @Html.ValidationMessageFor(model => model.S_DATE, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.TIME_END_E, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.S_TIME, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.TIME_END_E, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.TIME_END_E, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.S_TIME, new { htmlAttributes = new { @class = "form-control", @type = "time" } })
+                    @Html.ValidationMessageFor(model => model.S_TIME, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.E_DATE, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.E_DATE, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                    @Html.ValidationMessageFor(model => model.E_DATE, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.E_TIME, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.E_TIME, new { htmlAttributes = new { @class = "form-control", @type = "time" } })
+                    @Html.ValidationMessageFor(model => model.E_TIME, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -107,14 +124,6 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.CONDITION_SEX, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.CONDITION_SEX, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.SOLD_OUT_SEAT, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.SOLD_OUT_SEAT, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.SOLD_OUT_SEAT, "", new { @class = "text-danger" })
                 </div>
             </div>
 

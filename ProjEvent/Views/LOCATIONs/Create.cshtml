@@ -4,11 +4,9 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
 @if (Session["username"] != null)
 {
-
+    <h2>Create</h2>
     using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -29,7 +27,12 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.CATEGORY, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.CATEGORY, new { htmlAttributes = new { @class = "form-control" } })
+                    @{
+                        List<SelectListItem> listItems = new List<SelectListItem>();
+                        listItems.Add(new SelectListItem { Text = "Indoor", Value = "Indoor" });
+                        listItems.Add(new SelectListItem { Text = "Outdoor", Value = "Outdoor", });
+                    }
+                    @Html.DropDownListFor(model => model.CATEGORY, listItems, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.CATEGORY, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -105,6 +108,10 @@
                 </div>
             </div>
         </div>
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
     }
 }
 else
@@ -115,9 +122,6 @@ else
 
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

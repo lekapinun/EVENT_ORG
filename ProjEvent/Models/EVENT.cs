@@ -41,6 +41,10 @@ namespace ProjEvent.Models
 
         public string Owner_member { get; set; }
         public string Event_location { get; set; }
+        public DateTime S_DATE { get; set; }
+        public DateTime E_DATE { get; set; }
+        public TimeSpan S_TIME { get; set; }
+        public TimeSpan E_TIME { get; set; }
 
 
         public virtual PROMOTE_E PROMOTE_E { get; set; }
