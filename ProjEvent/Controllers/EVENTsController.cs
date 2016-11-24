@@ -155,9 +155,10 @@ namespace ProjEvent.Controllers
             return list;
         }
 
-        public ActionResult EVENT()
+        public async Task<ActionResult> EVENT()
         {
-            return View();
+            var eVENTs = db.EVENTs;
+            return View(await eVENTs.ToListAsync());
         }
     }
 }

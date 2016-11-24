@@ -29,6 +29,7 @@ namespace ProjEvent.Controllers
                     if(log!=null)
                     {
                         Session["username"] = log.USERNAME;
+                        Session["img"] = log.URL_IMG;
                         return RedirectToAction("UsersHome","Home");
                     }
                     else
